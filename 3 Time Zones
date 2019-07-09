@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package time;
+
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+
+public class Time {
+
+    public static void main(String[] args) {
+       
+        
+         Locale l=new Locale("de","DE");
+        DateFormat  df=DateFormat.getDateInstance(DateFormat.LONG,l);
+        String s=df.format(new Date());
+        System.out.println(df);
+        
+        DateFormat  df1=DateFormat.getDateInstance(DateFormat.LONG,new Locale("zh","CN"));
+        String s1=df1.format(new Date());
+        System.out.println(s1);
+        
+         Locale l2=new Locale("de","DE");
+        DateFormat  df2=DateFormat.getTimeInstance(DateFormat.LONG,l);
+        String s2=df2.format(new Date());
+        System.out.println(s2);
+    }
+    
+}
